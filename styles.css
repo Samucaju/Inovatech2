@@ -105,6 +105,33 @@ main {
     margin-top: 10px;
 }
 
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sensor {
+        /* Faz com que cada sensor ocupe a largura total do contêiner para melhor visualização em dispositivos móveis */
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 10px 0; /* Reduz o espaçamento entre os sensores */
+    }
+
+    .thermometer, .humidity-bar {
+        /* Ajusta a largura para uma melhor visualização em dispositivos móveis */
+        width: 90%;
+    }
+}
+
+/* Media query para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    header, .sensor h2, .temperature-value, .humidity-value {
+        /* Reduz o tamanho da fonte para melhor ajuste do texto */
+        font-size: 90%;
+    }
+}
+
 @keyframes blinker {
     50% {
         background-color: #ffc107;
