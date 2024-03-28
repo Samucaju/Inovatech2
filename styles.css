@@ -24,40 +24,39 @@ main {
 .sensor {
     background-color: #ffffff;
     margin: 20px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px rgba(0,0,0,0.1);
     flex-basis: calc(33% - 40px);
     text-align: center;
     transition: transform 0.3s ease;
 }
 
 .sensor:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .sensor h2 {
     color: #005f73;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .thermometer {
-    width: 80%; /* Largura relativa ao seu contêiner */
-    height: 20px; /* Altura do termômetro */
-    background-color: #e0e0e0; /* Cor de fundo do termômetro */
-    border-radius: 10px; /* Bordas arredondadas */
-    position: relative; /* Posicionamento relativo para os filhos absolutos */
-    margin: 20px auto; /* Centraliza o termômetro horizontalmente */
-    overflow: hidden; /* Garante que o valor do termômetro não ultrapasse os limites */
+    width: 80%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
 }
 
 .thermometer-value {
-    position: absolute; /* Posicionamento absoluto dentro do termômetro */
-    bottom: 0; /* Alinha na parte inferior do termômetro */
-    width: 0%; /* Largura inicial do valor do termômetro */
-    background-color: #ff477e; /* Cor de fundo do valor do termômetro */
-    border-radius: 10px; /* Bordas arredondadas */
-    transition: width 0.5s ease; /* Transição suave para mudanças de largura */
+    position: absolute;
+    width: 0%;
+    background-color: #ff477e;
+    border-radius: 10px;
+    transition: width 0.5s ease;
 }
 
 .temperature-value {
@@ -112,24 +111,27 @@ main {
     }
 
     .sensor {
-        /* Faz com que cada sensor ocupe a largura total do contêiner para melhor visualização em dispositivos móveis */
         flex-basis: 100%;
         max-width: 100%;
-        margin: 10px 0; /* Reduz o espaçamento entre os sensores */
+        margin: 10px 0;
     }
 
     .thermometer, .humidity-bar {
-        /* Ajusta a largura para uma melhor visualização em dispositivos móveis */
         width: 90%;
     }
 }
 
-/* Media query para telas menores que 480px (smartphones) */
 @media (max-width: 480px) {
     header, .sensor h2, .temperature-value, .humidity-value {
-        /* Reduz o tamanho da fonte para melhor ajuste do texto */
         font-size: 90%;
     }
+
+    .sensor {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    
 }
 
 @keyframes blinker {
